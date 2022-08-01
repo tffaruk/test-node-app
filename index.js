@@ -20,9 +20,6 @@ mongoose
   .then(() => console.log("connection"))
   .catch((err) => console.log(err));
 
-app.use("/download", downloadHandler);
+app.use("/", downloadHandler);
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 app.listen(process.env.PORT || port);
